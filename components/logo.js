@@ -19,15 +19,15 @@ const LogoBox = styled.span`
 `
 
 const Logo = () =>{
-    const footPrint = `/images/ahmedsazzadlogo${useColorModeValue('','-dark')}.png`
+    const myLogo = `/images/ahmedsazzadlogo${useColorModeValue('','-dark')}.png`
     return(
         <Link href="/">
             <a>
                 <LogoBox>
-                    <Image src={footPrint} width={20} height={20} alt="Logo"/>
-                    <Text color={useColorModeValue('gray.800','whiteAlpha.900')} fontFamily="M PLUS Rounded 1c" fontWeight="bold" ml={3}>
+                    <Image src={ myLogo} width={20} height={20} alt="Logo"/>
+                    {/* <Text color={useColorModeValue('gray.800','whiteAlpha.900')} fontFamily="M PLUS Rounded 1c" fontWeight="bold" ml={3}>
                         Ahmed Sazzad
-                    </Text>
+                    </Text> */}
                 </LogoBox>
             </a>
         </Link>

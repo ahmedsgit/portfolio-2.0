@@ -1,29 +1,35 @@
-import { Container,Box,Heading,Image,useColorModeValue } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { Box, Button, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
+import Header from '../components/Header';
+import Paragraph from '../components/paragraph';
+import Section from '../components/section';
+import { ChevronRightIcon } from '@chakra-ui/icons'
+
 const page = ()=>{
     return (
-        <Container>
-            <Box borderRadius="lg" bg={useColorModeValue('whiteAlpha.500','whiteAlpha.200')} p={3} mb={6} align="center">
-                Hello I&apos;m a full-stack Web developer based in Bangladesh!
-            </Box>
-            <Box display={{md: 'flex'}}>
-                <Box flexGrow={1}>
-                    <Heading as="h2" variant="page-title">
-                        Ahmed Sazzad
-                    </Heading>
-                    <p>Web Lover (UI/UX Designer | Developer | Designer) </p>
+        <Container maxW="container.xl">
+            <Header/>
+            <Flex alignItems="center" justifyContent="center">
+                <Box w="md" borderTopLeftRadius="lg" borderBottomRightRadius="lg" bg={ useColorModeValue('whiteAlpha.500', 'whiteAlpha.200') } p={ 3 } mb={ 6 } align="center">
+                    Hello I&apos;m a full-stack Web Developer based in Bangladesh!
                 </Box>
-                <Box flexShrink={0} mt={{base:4, md: 0}} ml={{ md:6 }} align="center">
-                    <Image 
-                        borderColor="whiteAlpha.800" 
-                        borderWidth={ 2 } 
-                        borderStyle="solid" 
-                        maxWidth="100px" 
-                        display="inline-block" 
-                        borderRadius="full" 
-                        src="/images/ahmed.jpg"
-                    />
+            </Flex>
+            
+            <Section delay={0.1}>
+                <Heading as="h2" variant="Section Title">
+                    Works
+                </Heading>
+                <Paragraph>
+                    I'm a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
+                </Paragraph>
+                <Box align="center" my={4}>
+                    <NextLink href="/works">
+                        <Button rightIcon={ <ChevronRightIcon/>} colorScheme="teal">
+                            My Portfolio
+                        </Button>
+                    </NextLink>
                 </Box>
-            </Box>
+            </Section>
         </Container>
     )
 }
