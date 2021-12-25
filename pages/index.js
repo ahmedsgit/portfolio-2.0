@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Paragraph from '../components/paragraph';
 import Section from '../components/section';
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { BioSection,BioYear } from "../components/Bio";
 
 const page = ()=>{
     return (
@@ -29,6 +30,25 @@ const page = ()=>{
                         </Button>
                     </NextLink>
                 </Box>
+            </Section>
+            <Section delay={0.2}>
+                <Heading as="h3" variant="section-title">Bio</Heading>
+                <BioSection>
+                    <BioYear>1996 :</BioYear>
+                    Born in Madaripur( Bahadurpur ), Dhaka, Bangladesh.
+                </BioSection>
+                <BioSection>
+                    <BioYear>2019 :</BioYear>
+                    Graduation degree ( B.Sc.) in Computer science &amp; Engineering from East West Univeristy, Bangladesh
+                </BioSection>
+                <BioSection>
+                    <BioYear>2019-2020 :</BioYear>
+                    Works as a Database Engineer in Badsha Group of Industries.
+                </BioSection>
+                <BioSection>
+                    <BioYear>2020-Present :</BioYear>
+                    Works as a full time Freelancer.
+                </BioSection>
             </Section>
         </Container>
     )
