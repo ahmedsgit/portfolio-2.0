@@ -1,24 +1,13 @@
-import Logo from './logo';
-import NextLink from 'next/link';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
-    Container,
-    Box,
-    Link,
-    Stack,
-    Heading,
-    Flex,
-    Menu,
-    MenuItem,
-    MenuList,
-    MenuButton,
-    IconButton,
-    useColorModeValue,
-    Spacer
+    Box, Container, Flex, Heading, IconButton, Link, Menu, MenuButton, MenuItem,
+    MenuList, Stack, useColorMode, useColorModeValue
 } from '@chakra-ui/react';
-import { HamburgerIcon} from '@chakra-ui/icons';
-import { FaGithub, FaInstagram, FaLinkedin} from 'react-icons/fa';
-import ThemeToggleButton from './theme-toggle-button';
+import NextLink from 'next/link';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Logo from './logo';
 import SocialMediaIcon from './socialMediaIcon';
+import ThemeToggleButton from './theme-toggle-button';
 
 const LinkItem = ({ href, path, children, ...props }) => {
     const active = path === href;
@@ -39,7 +28,8 @@ const LinkItem = ({ href, path, children, ...props }) => {
 
 const Navbar = props => {
     const { path } = props;
-
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === "dark";
     return (
         <Box
             position="fixed"
@@ -73,13 +63,13 @@ const Navbar = props => {
                     mt={ { base: 4, md: 0 } }
                     justifyContent={{base:'center', md:'flex-end'}}
                 >
-                    <LinkItem href="/ " path={ path }>
+                    <LinkItem href="/ " path={ path } color={ isDark ? 'white' : 'Black' } _hover={ { textDecoration: 'none' } } _focus={ { color: 'cyan' } }_active={ { color:'gray.400'}}>
                         Home
                     </LinkItem>
-                    <LinkItem href="/works" path={ path }>
+                    <LinkItem href="/works" path={ path } color={ isDark ? 'white' : 'Black' } _hover={ { textDecoration: 'none' } } _focus={ { color: 'cyan' } } _active={ { color:'gray.400'}}>
                         Works
                     </LinkItem>
-                    <LinkItem href="/posts" path={ path }>
+                    <LinkItem href="/posts" path={ path } color={ isDark ? 'white' : 'Black' } _hover={ { textDecoration: 'none' } } _focus={ { color: 'cyan' } }_active={ { color:'gray.400'}}>
                         Posts
                     </LinkItem>
                     <LinkItem
@@ -87,9 +77,12 @@ const Navbar = props => {
                         href="https://github.com/ahmedsgit"
                         path={ path }
                         display="inline-flex"
+                        color={ isDark ? 'white' : 'Black' }
                         alignItems="center"
                         style={ { gap: 4 } }
                         pl={ 2 }
+                        _hover={ { textDecoration: 'none' } } _focus={ { color: 'cyan' } }
+                        _active={ { color: 'gray.400' } }
                     >
                         Source
                     </LinkItem>

@@ -1,8 +1,8 @@
-import { Container, Heading, SimpleGrid, Divider } from "@chakra-ui/react";
-import Section from "../components/section";
+import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
 import { WorkGridItem } from "../components/gridItem";
-import thumbHulu from "../public/images/works/hulu-clone.jpg";
 import Layout from "../components/layouts/article";
+import Section from "../components/section";
+import thumbHulu from "../public/images/works/hulu-clone.jpg";
 
 
 const Works = () =>{
@@ -14,32 +14,82 @@ const Works = () =>{
                 </Heading>
                 <SimpleGrid columns={ [1, 2, 3, 4] } gap={ 6 } >
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
+                            Simple Clone of Hulu Movie App Website
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem LiveLink="https://hulu-clone-peach-two.vercel.app/" CodeLink="https://github.com/ahmedsgit/Hulu-clone" id="huluClone007" title="Hulu Clone" thumbnile={ thumbHulu }>
                             Simple Clone of Hulu Movie App Website
                         </WorkGridItem>
                     </Section>

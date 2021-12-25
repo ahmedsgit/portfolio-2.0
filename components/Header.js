@@ -1,5 +1,4 @@
-import { Box, Button, Circle, Flex, Image, Spacer, Stack, Text, useColorMode, useColorModeValue} from "@chakra-ui/react";
-import styled from '@emotion/styled';
+import { Box, Button, Circle, Flex, Image, Spacer, Stack, Text, useColorMode } from "@chakra-ui/react";
 import AnimatedText from "./TextAnimationHeader";
 
 const Header = ()=>{

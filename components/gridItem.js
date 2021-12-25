@@ -1,13 +1,14 @@
-import NextLink from "next/link";
-import Image from "next/image";
-import { Box, Text, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Box, Button, LinkBox, LinkOverlay, Spacer, Text, useColorMode } from "@chakra-ui/react";
 import { Global } from "@emotion/react";
+import Image from "next/image";
+import NextLink from "next/link";
+
 
 export const GridItem = ({children, href, title,thumbnile}) =>{
     return(
         <Box w="100%" align="center">
             <LinkBox cursor="pointer">
-                <Image src={ thumbnile } alt={ title } className="grid-item-thumbnail" placeholder="blur" loading="lazy" />
+                <Image styles={{}} src={ thumbnile } alt={ title } className="grid-item-thumbnail" loading="lazy" />
                 <LinkOverlay href={ href } target="_blank">
                     <Text mt={ 2 }>{ title }</Text>
                 </LinkOverlay>
@@ -18,18 +19,28 @@ export const GridItem = ({children, href, title,thumbnile}) =>{
     
 }
 
-export const WorkGridItem = ({children, id, title, thumbnile}) =>{
+export const WorkGridItem = ({ children, id, title, thumbnile, LiveLink="/", CodeLink = "/"}) =>{
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === "dark";
     return(
-        <Box w="100%" align="center">
-            <NextLink href={ `/works/${id}` }>
-                <LinkBox cursor="pointer">
-                    <Image src={ thumbnile } alt={ title } className="grid-item-thumbnail" placeholder="blur" />
+        <Box p={2} borderRadius="xl" boxShadow="dark-lg" w="100%" align="center" position="relative" role="group">
+            <NextLink href={ `/works/${id}` } >
+                <LinkBox>
+                    <Image cursor="pointer" src={ thumbnile } alt={ title }  className="grid-item-thumbnail" placeholder="blur" />
                     <LinkOverlay href={ `/works/${id}` }>
-                        <Text mt={ 2 } fontSize={ 20 }>{ title }</Text>
+                        <Text color="teal" mt={ 2 } fontSize={ 20 }>{ title }</Text>
                     </LinkOverlay>
                     <Text fontSize={ 14 }>{ children }</Text>
                 </LinkBox>
             </NextLink>
+            <Box position="absolute" visibility="hidden" _groupHover={ { visibility: "visible", bg:"rgba(140, 140, 140,0.3)" } } top={ 0 } left={ 0 } display="flex" justifyContent="center" alignItems="center" w="100%" h="100%" borderRadius={"xl"}>
+                <NextLink href={LiveLink} >
+                    <Button _hover={ { bg: isDark ? "teal" : "cyan", border: "2px" } } mr={ 2 }>Live</Button>
+                </NextLink>
+                <NextLink href={CodeLink} >
+                    <Button _hover={ { bg: isDark ? "teal" : "cyan", border: "2px" } } mr={ 2 }>Source</Button>
+                </NextLink>
+            </Box>
         </Box>
     )
 }
