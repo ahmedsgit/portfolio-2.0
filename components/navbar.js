@@ -84,7 +84,7 @@ const Navbar = props => {
                         _hover={ { textDecoration: 'none' } } _focus={ { color: 'cyan' } }
                         _active={ { color: 'gray.400' } }
                     >
-                        Source
+                        <FaGithub />Source
                     </LinkItem>
                 </Stack>
 

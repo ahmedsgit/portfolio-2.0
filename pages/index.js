@@ -2,7 +2,6 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Box, Button, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { BioSection, BioYear } from "../components/Bio";
-import Header from '../components/Header';
 import Layout from "../components/layouts/article";
 import Paragraph from '../components/paragraph';
 import Section from '../components/section';
@@ -11,7 +10,6 @@ const page = ()=>{
     return (
         <Layout>
             <Container maxW="container.xl">
-                <Header />
                 <Flex alignItems="center" justifyContent="center">
                     <Box w="md" borderTopLeftRadius="lg" borderBottomRightRadius="lg" bg={ useColorModeValue('whiteAlpha.500', 'whiteAlpha.200') } p={ 3 } mb={ 6 } align="center">
                         Hello I&apos;m a full-stack Web Developer based in Bangladesh!
@@ -19,9 +17,7 @@ const page = ()=>{
                 </Flex>
 
                 <Section delay={ 0.1 }>
-                    <Heading as="h2" variant="Section Title">
-                        Works
-                    </Heading>
+                    <Heading as="h3" variant="section-title">About</Heading>
                     <Paragraph>
                         I'm a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
                     </Paragraph>
