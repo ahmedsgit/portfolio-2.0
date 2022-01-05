@@ -1,34 +1,41 @@
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import { Box, Button, Container, Flex, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, IconButton, Link, Text, Tooltip, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { BioSection, BioYear } from "../components/Bio";
+import Experience from '../components/Experience';
 import Layout from "../components/layouts/article";
 import Paragraph from '../components/paragraph';
 import Section from '../components/section';
 
 const page = ()=>{
+    const { colorMode } = useColorMode();
+    const isDark = colorMode === "dark";
     return (
         <Layout>
             <Container maxW="container.xl">
                 <Flex alignItems="center" justifyContent="center">
-                    <Box w="md" borderTopLeftRadius="lg" borderBottomRightRadius="lg" bg={ useColorModeValue('whiteAlpha.500', 'whiteAlpha.200') } p={ 3 } mb={ 6 } align="center">
+                    <Box w="md" boxShadow="dark-lg" border="1px" borderColor={isDark ? "teal.500" : "green.300"} borderTopLeftRadius="lg" borderBottomRightRadius="lg" bg={ useColorModeValue('whiteAlpha.500', 'whiteAlpha.200') } p={ 3 } mb={ 6 } align="center">
                         Hello I&apos;m a full-stack Web Developer based in Bangladesh!
                     </Box>
                 </Flex>
-
                 <Section delay={ 0.1 }>
                     <Heading as="h3" variant="section-title">About</Heading>
                     <Paragraph>
-                        I'm a freelance and a full-stack developer based in Osaka with a passion for building digital services/stuff he wants. He has a knack for all things launching products, from planning and designing all the way to solving real-life problems with code. When not online, he loves hanging out with his camera. Currently, he is living off of his own product called Inkdrop.
+
+                        I'm a full-stack web developer. I would like to work in a positive environment and always prepare to take risk in order to fulfill
+                        my dream of seeing me in a leadership position and having a challenging career, where I can
+                        contribute my knowledge and skills to the organization and enhance my experience and
+                        potential by achieving more knowledge through continuous learning, hard work and team work.
                     </Paragraph>
-                    <Box align="center" my={ 4 }>
-                        <NextLink href="/works">
-                            <Button rightIcon={ <ChevronRightIcon /> } colorScheme="teal">
-                                My Portfolio
-                            </Button>
-                        </NextLink>
-                    </Box>
                 </Section>
+                <Experience/>
+                <Box align="center" my={ 4 }>
+                    <NextLink href="/works">
+                        <Button rightIcon={ <ChevronRightIcon /> } colorScheme="teal">
+                            My Projects
+                        </Button>
+                    </NextLink>
+                </Box>
                 <Section delay={ 0.2 }>
                     <Heading as="h3" variant="section-title">Bio</Heading>
                     <BioSection>

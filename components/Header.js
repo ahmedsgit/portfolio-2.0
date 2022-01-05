@@ -1,4 +1,5 @@
 import { Box, Button, Circle, Flex, Image, Spacer, Stack, Text, useColorMode } from "@chakra-ui/react";
+import Link from "next/link";
 import AnimatedText from "./TextAnimationHeader";
 
 const Header = ()=>{
@@ -22,7 +23,11 @@ const Header = ()=>{
                         <AnimatedText/>
                     </Text>
                     <Button ml={5} mt={8} colorScheme="teal" onClick="#" mr={5}>Hire Me</Button>
-                    <Button mt={8} variant="outline" border="2px" borderColor={isDark? "teal" : "gray.400"} onClick="#">Resume</Button>
+                    <a href="/resume.pdf" download>
+                        <strong>
+                            <Button mt={ 8 } variant="outline" border="2px" borderColor={ isDark ? "teal" : "gray.400" } >Resume</Button>
+                        </strong>
+                    </a>
                 </Box>
                 <Spacer/> 
                 <Image mr={ 12 } borderRadius="full" backgroundColor="transparent" boxShadow="2xl" border='4px' borderColor={ isDark ? "cyan.400" : "gray.300" } boxSize="300px" src="/images/ahmed.jpg" />
