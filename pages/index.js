@@ -21,7 +21,6 @@ const page = ()=>{
                 <Section delay={ 0.1 }>
                     <Heading as="h3" variant="section-title">About</Heading>
                     <Paragraph>
-
                         I'm a full-stack web developer. I would like to work in a positive environment and always prepare to take risk in order to fulfill
                         my dream of seeing me in a leadership position and having a challenging career, where I can
                         contribute my knowledge and skills to the organization and enhance my experience and

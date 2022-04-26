@@ -1,12 +1,11 @@
 import { Box, Button, Circle, Flex, Image, Spacer, Stack, Text, useColorMode } from "@chakra-ui/react";
-import Link from "next/link";
 import AnimatedText from "./TextAnimationHeader";
 
 const Header = ()=>{
     const {colorMode} = useColorMode();
     const isDark = colorMode === "dark";
     return (
-        <Stack mb={5} ml={10}>
+        <Stack mb={5} ml={10} h="100vh flex">
             <Circle
                 position="absolute"
                 bg={ isDark ? "whiteAlpha.600" : "gray.400" }
@@ -30,8 +29,10 @@ const Header = ()=>{
                     </a>
                 </Box>
                 <Spacer/> 
-                <Image mr={ 12 } borderRadius="full" backgroundColor="transparent" boxShadow="2xl" border='4px' borderColor={ isDark ? "cyan.400" : "gray.300" } boxSize="300px" src="/images/ahmed.jpg" />
-
+                <Box>
+                    
+                </Box>
+                <Image className="" mr={ 12 } borderRadius="full" backgroundColor="transparent" boxShadow="2xl" border='4px' borderColor={ isDark ? "cyan.400" : "gray.300" } boxSize="300px" objectFit='cover' src="/images/ahmed.jpg" />
             </Flex>
         </Stack>
     )
